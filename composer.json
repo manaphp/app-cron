@@ -1,0 +1,23 @@
+{
+    "name": "manaphp/app-cron",
+    "description": "ManaPHP Cron Application",
+    "type": "project",
+    "require": {
+        "manaphp/framework": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ManaPHP Mark",
+            "email": "manaphp@qq.com"
+        }
+    ],
+    "scripts": {
+        "post-root-package-install":[
+            "php -n -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "php -n -r \"chmod('manacli', 0755);\"",
+            "php -n -r \"chmod('data', 0777);\"",
+            "php -n -r \"chmod('tmp', 0777);\""
+        ]
+    }
+}

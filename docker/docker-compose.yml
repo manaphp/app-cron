@@ -1,0 +1,10 @@
+version: "2"
+services:
+  cron:
+    image: manaphp/php70:1.0
+    volumes: 
+      - ../:/var/www/html
+      - ./cron.d:/etc/cron.d
+      - /data/volumes/${COMPOSE_PROJECT_NAME}/cron:/var/log/cron
+    command: run cron
+    restart: always
