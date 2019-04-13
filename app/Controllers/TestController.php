@@ -12,8 +12,6 @@ class TestController extends Controller
      */
     public function defaultCommand($name = 'manaphp')
     {
-        $this->console->debug(['hello :1!', $name]);
-        $this->console->debug(['hello :name!', 'name' => $name]);
-        $this->logger->debug('abcd');
+        $this->console->debug(['hello %s!', $name]);
     }
 }
