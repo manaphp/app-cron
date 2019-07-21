@@ -1,12 +1,11 @@
 version: "2"
 services:
   cron:
-    image: manaphp/php72:1.2
+    image: manaphp/php73:2.0
     volumes: 
       - ../:/var/www/html
       - ./cron.d:/etc/cron.d
       - /data/volumes/${COMPOSE_PROJECT_NAME}/cron/log:/var/log/cron
       - /data/volumes/${COMPOSE_PROJECT_NAME}/cron/data:/var/www/html/data
       - /data/volumes/${COMPOSE_PROJECT_NAME}/cron/tmp:/var/www/html/tmp
-    command: run cron
     restart: always
