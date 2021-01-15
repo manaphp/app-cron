@@ -1,8 +1,9 @@
 /vendor
 /data
 /tmp
-/.env
+/config/.env
 /.idea
 /*.tar
 /*.zip
 /*.bak
+/app/Commands/TestController.php

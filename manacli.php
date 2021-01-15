@@ -2,5 +2,5 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-$cli = new \App\Application();
-$cli->main();
+$app = new App\Application();
+$app->main();

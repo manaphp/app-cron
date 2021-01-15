@@ -3,8 +3,8 @@ services:
   cron:
     image: manaphp/php74:4.1
     volumes: 
-      - ../:/var/www/html
-      - ./cron.d:/tmp/cron.d
+      - ./:/var/www/html
+      - ./docker/cron.d:/tmp/cron.d
       - /data/volumes/${COMPOSE_PROJECT_NAME}/cron/log:/var/log/cron
       - /data/volumes/${COMPOSE_PROJECT_NAME}/cron/data:/var/www/html/data
       - /data/volumes/${COMPOSE_PROJECT_NAME}/cron/tmp:/var/www/html/tmp
